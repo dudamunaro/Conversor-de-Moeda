@@ -16,14 +16,13 @@ texto_moeda_origem = customtkinter.CTkLabel(janela, text="Selecione a moeda de o
 texto_moeda_destino = customtkinter.CTkLabel(janela, text="Selecione a moeda de destino",  font=("arial", 18))
 campo_moeda_origem = customtkinter.CTkOptionMenu(janela, values=["USD", "EUR", "BRL", "BTC"],  font=("arial black", 18), fg_color=("#FF1493"), button_color=("#FF1493"))
 
-campo_moeda_destino = customtkinter.CTkOptionMenu(janela, values=["USD", "EUR", "BRL", "BTC"],  font=("arial black", 18), text_color=("#DB7093"))
+campo_moeda_destino = customtkinter.CTkOptionMenu(janela, values=["USD", "EUR", "BRL", "BTC"],  font=("arial black", 18), fg_color=("#FF1493"), button_color=("#FF1493"))
 moedas_disponiveis = ["USB: dólar americano","EUR: euro","BRL: real brasileiro","BTC: Bitcoin"]
 
 
 def converter_moeda():
     print("Converter moeda")
-botao_converter = customtkinter.CTkButton(janela, text="Converter" , command=converter_moeda,  font=("arial black", 18))
-
+botao_converter = customtkinter.CTkButton(janela, text="Converter" , command=converter_moeda,  font=("arial black", 18), fg_color=("#FF1493"))
 lista_moedas = customtkinter.CTkScrollableFrame(janela)
 
 for moeda in  moedas_disponiveis:
